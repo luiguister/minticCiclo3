@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block contenido %}
+<form action="" method=post>
+   <fieldset>
+      <legend>Contact Form</legend>
+      {{form.hidden_tag()}}
+      <div style=font-size:20px; font-weight:bold; margin-left:150px;>
+         {{ form.name.label }} {{ form.name }}<br>
+         <br>
+         {{ form.Gender.label }} {{ form.Gender }}
+         {{ form.Address.label }}{{ form.Address }}<br>
+         <br>
+         {{ form.email.label }}{{ form.email }}<br>
+         <br>
+         {{ form.Age.label }}{{ form.Age }}<br>
+         <br>
+         {{ form.language.label }}{{ form.language }}<br>
+         <br>
+         {{ form.submit }}
+      </div>
+
+   </fieldset>
+</form>
+{% endblock %}

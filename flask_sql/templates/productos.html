@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<table id="tabla">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
+        {% for prod in l_productos %}
+        <tr>
+            <th>{% print(prod[0]) %}</th>
+            <th>{{ prod[1] }}</th>
+            <th>{{ prod[2] }}</th>
+            <th>{{ prod[3] }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

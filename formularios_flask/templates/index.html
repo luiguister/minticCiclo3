@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block link %}
+<a href="#">Nuevo link</a>
+{% endblock %}
+
+
+{% block principal %}
+<h1>Titulo</h1>
+<ul>
+    {% for i in lista %}
+    <li>item {{i}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

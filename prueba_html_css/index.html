@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Formulario de Registro</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <form action="/my-handling-form-page" method="post">
+    <h6>Registro de Vacunación Covid-19</h6>
+
+    <div class="input-field col s12">
+      <input id="first_name" type="text" class="validate">
+      <label class="active" for="first_name">Nombres</label>
+    </div>
+    <div class="input-field col s12">
+      <input id="last_name" type="text" class="validate">
+      <label class="active" for="last_name">Apellidos</label>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label class="active" for="genero">Genero</label>
+        <p>
+          <label>
+            <input name="group1" type="radio" />
+            <span>Hombre</span>
+          </label>
+        
+          <label>
+            <input name="group1" name="group1" type="radio" />
+            <span>Mujer</span>
+          </label>
+        </p>
+      </div>
+    </div>
+    <div class="input-field col s12">
+      <input id="password" type="password" class="validate">
+      <label class="active" for="password">Password</label>
+    </div>
+    <div class="input-field col s12">
+      <input id="email" type="email" class="validate">
+      <label class="active" for="email">Email</label>
+    </div>
+    <div class="input-field col s12">
+      <p>
+        <label>
+          <input type="checkbox" />
+          <span>Declaro haber leído y aceptado todas las condiciones generales del programa y la normativa sobre
+            protección de datos</span>
+        </label>
+      </p>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
+  <script>
+    function aleatorio(min, max){
+      var ng= Math.floor(Math.random()*(max-min)+min)
+      return ng
+    }
+    document.write("<h3>aleatorio "+Math.floor(Math.random()*10)+"</h3>")
+
+    function cerrarVentana(){
+      setTimeout(() => {
+        cerrar()
+      }, 5000);
+    }
+    function cerrar(){
+      window.close()
+    }
+
+    setTimeout(() => {
+      document.write("<p>prueba</p>")
+    }, 9000);
+  </script>
+  <input type="button" value="cierra ventana" onclick="cerrarVentana()"/> 
+</body>
+</html>

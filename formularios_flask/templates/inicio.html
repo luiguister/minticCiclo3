@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block principal %}
+<h1>Inicio de Sesion</h1>
+<form action="" method="post" novalidate>
+    {{form.hidden_tag()}} 
+    <!--Genera campo oculto el cual incluye un token que se emplea para progeter los formularios de ataques tipo csrs-->
+    <p>
+        {{ form.nombre.label }}<br>
+        {{ form.nombre(size=15) }}<br>
+        {% for error in form.nombre.errors %}
+            <span style="color:brown;">[{{error}}]</span></sman>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.contraseña.label }}<br>
+        {{ form.contraseña(size=15) }}<br>
+        {% for error in form.contraseña.errors %}
+            <span style="color:brown;">[{{error}}]</span></sman>
+        {% endfor %}
+    </p>
+    <p>{{form.recordar()}} {{form.recordar.label}}</p>
+
+    <p>{{form.enviar()}}</p>
+</form>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    {% if titulo %}
+    <title>{{ titulo }}</title>
+    {% else %}
+    <title>El sitio</title>
+    {% endif %}
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='miEstilo.css')}}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <h1>{{ titulo }}</h1>
+    <a href="/">Start</a>
+    <a href="/nuevo">New Product</a>
+    <a href="/productos">Product list</a>
+    <a href="/cerrar">Log out</a>
+    {% if 'usuario' in session: %}
+    <h3>User: {{session['usuario']}}</h3>
+    {% else %}
+    <h3>without user</h3>
+    {% endif %}
+    {% if request.cookies.get('visited')=='True' %}
+    <h4>Nice to see you here {{g.elusuario}}, we remember your preferred languaje: {{request.cookies.get('language')}}</h4>
+    {% endif %}
+    </hr>
+    {% with mensajes = get_flashed_messages() %} 
+    {% if mensajes %}
+    <ul>
+        {% for mensaje in mensajes %}
+        <li>{{ mensaje }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block contenido %}
+    {% endblock %}
+    <p>That's all</p>
+</body>
+</html>

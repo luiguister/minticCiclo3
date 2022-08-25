@@ -1,0 +1,8 @@
+<!-- Output Format :  17-01-2022 -->
+<p>{{ row['cdate'] | date_format }}</p>
+
+<!-- Output Format :  17 Jan 2022 -->
+<p>{{ row['cdate'] | date_format("%b %d - %Y") }}</p>
+
+<!-- Output Format :  Mon January 2022 -->
+<p>{{ row['cdate'] | date_format("%a - %B - %Y") }}</p>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% if 'usuario' in session: %}
+
+<form action="/nuevo" method="post">
+    {{form.codigo.label}} {{form.codigo}}
+<br />
+    {{form.nombre.label}} {{form.nombre}}
+<br/>
+    {{form.precio.label}} {{form.precio}}
+<br />
+    {{form.cantidad.label}} {{form.cantidad}}
+<br />
+    {{form.enviar}} {{form.hidden_tag()}}
+</form>
+{% else  %}
+    <h3>you have log in to register a product</h3>
+{% endif %}
+{% endblock %}
+

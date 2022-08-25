@@ -1,0 +1,49 @@
+h1{
+    color:#669;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+form{
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: blanchedalmond;
+}
+
+button{
+    text-align: center;
+    font-weight: bold;
+}
+
+table{
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-size: 12px;
+    margin: 45px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th{
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #edeff3;
+    border-top: 4px solid #fff;
+    color: #039;
+}
+
+td{
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+tr:hover td{
+    background: #d0dafd;
+    color: rgb(201,201,209);
+}
